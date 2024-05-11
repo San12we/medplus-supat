@@ -62,12 +62,12 @@ const Blogs = () => {
   }, []);
 
   return (
-    <div className="bg-blue-200 py-12">
+    <div className="bg-blue-200 ">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-xl text-slate-950 font-bold  text-center mb-8">MedPlus Community</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {dummyBlogs.map((blog, index) => (
-            <motion.div
+            <motion.article
               key={index}
               id={`blog-${index}`}
               initial={{ opacity: 0, x: 20 }}
@@ -77,19 +77,19 @@ const Blogs = () => {
             >
               <div className="flex items-center mb-4">
                 <img
-                  className="w-20 h-20 rounded-lg mr-4 object-cover"
+                  className="w-20 h-20 rounded-sm mr-2 object-cover"
                   src={blog.imageUrl}
                   alt={blog.title} // Add meaningful alt text
                 />
                 <div>
-                  <h3 className="text-lg font-semibold mb-2">{blog.title}</h3>
-                  <p className="text-slate-950 font-bold mb-2">Author: {blog.author}</p>
+                  <h4 className="text-md font-semibold ">{blog.title}</h4>
+                  <p className="text-slate-950 font-bold ">Author: {blog.author}</p>
                   <p className="text-slate-950 mb-2">Date: {blog.date}</p>
                 </div>
               </div>
-              <p className="text-slate-950 text-lg mb-4">{blog.content}</p>
+              <p className="font-normal text-gray-700 dark:text-gray-400">{blog.content}</p>
               <a href="#" className="text-blue-500 hover:underline">Read More</a>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
         <div className="text-center mt-8">
