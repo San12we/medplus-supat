@@ -14,7 +14,7 @@ const Footer = () => {
         
         <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
           <div>
-          
+          <h2 className='mb-6 txt sm font-semibold text-slate-950 font-mono uppercase'>Links</h2>
             <ul className="text-gray-500 dark:text-white font-medium">
               <li className="mb-4">
                 <a href="/about" className="hover:underline text-white font-mono">About</a>
