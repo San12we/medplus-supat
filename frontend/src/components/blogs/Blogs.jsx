@@ -92,8 +92,8 @@ const Blogs = () => {
             </motion.article>
           ))}
         </div>
-        <div className="text-center mt-8">
-          <button className="bg-orange-500 text-white px-6 py-3 rounded-md hover:bg-blue-600 transition duration-300">
+        <div className="text-center p-4 ">
+          <button className="bg-orange-500 text-white px-6 py-3 rounded-md hover:bg-blue-600 transition p-4 duration-300">
             View More
           </button>
         </div>
