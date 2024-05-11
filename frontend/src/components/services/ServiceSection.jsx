@@ -39,9 +39,9 @@ const services = [
 
 
 const categories= [
-  { icon: ambulanceIcon, description: "", title: "Nephrologist"},
+  { icon: ambulanceIcon, description: "", title: "Neurologist"},
   { icon: flaskIcon, description: "" , title: "Cardiologist"},
-  {icon: kidneyIcon, description: "", title: "Neurologist"},
+  {icon: kidneyIcon, description: "", title: "Nephrologist"},
   {icon: pregnancyIcon, description: "", title: "Gynaecologist"},
   {icon: cancerIcon, description: "", title: "Oncologist"},
   {icon: pediatricsImage, description: "", title: "Paediatrician"}
@@ -75,13 +75,14 @@ const PatientPage = ({authUser}) => {
       <div className="card w-full bg-base-100 shadow-xl image-full">
   <figure><img src="https://res.cloudinary.com/dws2bgxg4/image/upload/v1714938261/c3_caagpo.jpg" alt="Doctor" /></figure>
   <div className="card-body">
-    <h2 className="card-title">Hello {authUser.username}</h2>
+    <h2 className="card-title">Hello {authUser}</h2>
     <p>Welcome ,Our Doctors are available </p>
     <div className="card-actions justify-end">
       <button className="btn btn-primary">Consult now</button>
     </div>
   </div>
 </div>
+      
                 
   
   
@@ -95,16 +96,16 @@ const PatientPage = ({authUser}) => {
   </button>
 </div>
 
-      <div className="mb-4 glass rounded-box">
-        <h2 className="text-lg font-bold text-white font-mono mb-2 text-center">Categories </h2>
-        <div className="grid grid-cols-2 gap-4">
-          {/* Category Cards */}
-          {categories.map((category, index) => (
-  <CategoryCard key={index} icon={category.icon} title={category.title} description={category.description} />
-))}
-          
-        </div>
-      </div>
+<div className="mb-4 glass rounded-box overflow-x-auto">
+  <h2 className="text-lg font-bold text-white font-mono mb-2 text-center">Categories </h2>
+  <div className="flex flex-nowrap space-x-4 pb-4">
+    {/* Category Cards */}
+    {categories.map((category, index) => (
+      <CategoryCard key={index} icon={category.icon} title={category.title} description={category.description} />
+    ))}
+  </div>
+</div>
+
       <div className="mb-4 bg-blue-200">
         <h2 className="text-lg font-bold text-white mb-2 font-bold font-mono text-center">Services Offered</h2>
         <Flipper flipKey={flipped}>
