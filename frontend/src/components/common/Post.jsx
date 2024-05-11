@@ -125,7 +125,7 @@ const Post = ({ post }) => {
 
 	return (
 		<>
-			<div className='flex gap-2 items-start p-4 bg-blue-200 border-b border-gray-700'>
+			<div className='flex gap-2 items-start p-4 bg-slate-800 border-b border-gray-700'>
 				<div className='avatar'>
 					<Link to={`/profile/${postOwner.username}`} className='w-8 rounded-full overflow-hidden'>
 						<img src={postOwner.profileImg || "/avatar-placeholder.png"} />
@@ -133,10 +133,10 @@ const Post = ({ post }) => {
 				</div>
 				<div className='flex flex-col flex-1'>
 					<div className='flex gap-2 items-center'>
-						<Link to={`/profile/${postOwner.username}`} className='font-bold'>
+						<Link to={`/profile/${postOwner.username}`} className='font-bold text-white'>
 							{postOwner.fullName}
 						</Link>
-						<span className='text-gray-700 flex gap-1 text-sm'>
+						<span className='text-white flex gap-1 text-sm'>
 							<Link to={`/profile/${postOwner.username}`}>@{postOwner.username}</Link>
 							<span>·</span>
 							<span>{formattedDate}</span>
